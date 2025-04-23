@@ -10,12 +10,12 @@
           return false;
         }
         for (ch of str1) {
-          // console.warn(ch)
+          console.log(ch);
           ObjStr1[ch] = (ObjStr1[ch] || 0) + 1;
         }
-        // console.warn(ObjStr1);
+        console.log(ObjStr1);
         for (ch of str2) {
-          //   console.warn(ObjStr1[ch]);
+          console.log(ObjStr1[ch]);
           if (!ObjStr1[ch]) {
             return false;
           }
