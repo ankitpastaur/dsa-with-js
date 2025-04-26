@@ -2,22 +2,27 @@
   <head>
     <title>Array Insert</title>
     <script>
-      let data = [10, 49, 39, 23, 56, 65];
-      let newEl = 55;
-      let position = 4;
-      for (let i = data.length - 1; i > 0; i--) {
-        console.log(data[i]);
-        if (i >= position) {
-          data[i + 1] = data[i];
-          if (i == position) {
-            data[i] = newEl;
+      function insertElement() {
+        let data = [10, 49, 39, 23, 56, 65];
+        let newEl = document.getElementById("element").value;
+        let position = document.getElementById("position").value;
+        for (let i = data.length - 1; i >= 0; i--) {
+          console.log(data[i]);
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newEl;
+            }
           }
         }
+        console.log(data);
       }
-      console.log(data);
     </script>
   </head>
   <body>
     <h1>Array Insert</h1>
+    <input type="text" placeholder="Input Position" id="position" />
+    <input type="text" placeholder="Element for insert" id="element" />
+    <button onclick="insertElement()">Insert</button>
   </body>
 </html>
