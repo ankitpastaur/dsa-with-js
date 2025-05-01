@@ -2,20 +2,19 @@
   <head>
     <title>Seacrh any Item in Array</title>
     <script>
-      let data = [2, 5, 6, 77, 4, 3, 9];
+      let data = [2, 5, 6, 77, 4, 3, 9, 66, 77];
+      let indices = [];
 
       function handleSeacrh() {
         let item = parseInt(document.getElementById("searchItem").value);
         console.log(item);
-        let index = undefined;
         for (i = 0; i <= data.length - 1; i++) {
           if (data[i] === item) {
-            index = i;
-            break;
+            indices.push(i);
           }
         }
-        if (index !== undefined) {
-          alert("Item found at index " + index);
+        if (indices.length > 0) {
+          alert("Item found at indices  " + indices.join(", "));
         } else {
           alert("Item not found");
         }
